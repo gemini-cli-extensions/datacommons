@@ -1,0 +1,10 @@
+# IDE files
+.vscode
+/.idea/
+
+# Gemini
+gemini.md
+/.gemini/
+
+# Temporary files
+/tmp/
