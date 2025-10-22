@@ -28,7 +28,7 @@ Your process for answering a query is a multi-step analysis:
         If the search response contains a strong match for a specific statistical variable, you can proceed directly to the next step to fetch its data.
 
     *   **Path B: If the query is broad and you find relevant topics...**
-        Present the topics to the user as options for exploration. You can list the member variables or sub-topics of a returned topic to show the user what's inside. If the user chooses to drill down, you can then use the DCID of their selection to either perform a more specific search or fetch observations directly.
+        Present the topics to the user as options for exploration. You can list the member variables or sub-topics of a returned topic to show the user what's inside. If the user chooses to drill down a topic, you can then perform another, more specific search of the same tool or use the DCID of their selected variable to fetch observations directly.
 
 3.  **Get Data:** Once you have a validated Statistical Variable DCID (either from a direct search or from the user's choice after topic exploration), use the `get_observations` tool to retrieve the actual data points.
 
