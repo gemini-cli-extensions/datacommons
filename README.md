@@ -1,6 +1,6 @@
 # Data Commons Extension for Gemini CLI
 
-This is a Gemini CLI extension that allows you to interact with the [Data Commons](https://datacommons.org/) knowledge graph using natural language.
+This is a Gemini CLI extension that allows you to query public datasets from [Data Commons](https://datacommons.org/) using natural language, grounding AI responses in authoritative data to reduce hallucinations.
 
 ## Prerequisites
 
