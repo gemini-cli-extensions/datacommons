@@ -1,12 +1,12 @@
 {
   "name": "datacommons",
-  "version": "1.1.0rc2",
+  "version": "1.1.0rc3",
   "description": "Query public datasets from Data Commons using natural language, and ground AI responses from any tools using authoritative data.",
   "contextFileName": "DATACOMMONS.md",
   "mcpServers": {
     "datacommons-mcp": {
       "command": "uvx",
-      "args": ["datacommons-mcp@1.1.0rc2", "serve", "stdio"]
+      "args": ["datacommons-mcp@1.1.0rc3", "serve", "stdio"]
     }
   }
 }
