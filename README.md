@@ -37,7 +37,7 @@ Once the extension is installed and configured, run `gemini`. You can ask questi
 
 You can diagnose common errors, such as invalid API keys, by using the `d` flag:
 ```
-gemini `d
+gemini -d
 ```
 
 ## Uninstall
