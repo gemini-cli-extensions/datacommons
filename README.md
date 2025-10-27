@@ -1,13 +1,17 @@
 # Data Commons Extension for Gemini CLI
 
-This is a Gemini CLI extension that allows you to query public datasets from [Data Commons](https://datacommons.org/) using natural language, grounding AI responses in authoritative data to reduce hallucinations.
+This is a Gemini CLI extension that allows you to query public datasets from [Data Commons](https://datacommons.org/) using natural language, and to ground AI responses from any any other tools in authoritative data, to reduce hallucinations.
+
+This page provides basic instructions for installing and running the extension. For more complete informationn on using Data Commons with Gemini CLI, please see the [Data Commons documentation](https://docs.datacommons.org/mcp).
 
 ## Prerequisites
 
 Before using this extension, you will need:
 
+-  [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed.
 -   A free Data Commons API key. To obtain an API key, go to https://apikeys.datacommons.org and request a key for the api.datacommons.org domain. Once you have your key, set it as an environment variable named `DC_API_KEY`.
--   Install `uv`, a tool for managing and installing Python packages: install from https://docs.astral.sh/uv/getting-started/installation/.
+-   `uv`, a tool for managing and installing Python packages: install from https://docs.astral.sh/uv/getting-started/installation/. 
+-   Optionally, if you have a GCP account and project and would like to use a [Google API key](https://aistudio-preprod.corp.google.com/api-keys) for authentication, set the key as an environment variable named `GEMINI_API_KEY`.
 
 ## Installation
 
@@ -18,7 +22,9 @@ gemini extensions install https://github.com/gemini-cli-extensions/datacommons
 
 ## Usage
 
-Once the extension is installed and configured, you can ask questions about statistical data in natural language.
+Once the extension is installed and configured, run `gemini`. You can ask questions about statistical data in natural language.
+
+> Note: If you have previously configured Gemini CLI to use the Data Commons MCP Server and want to use the extension instead, be sure to delete or comment out the `datacommons-mcp` section from your `.gemini/settings.json` file. 
 
 ### Examples
 
@@ -27,6 +33,20 @@ Once the extension is installed and configured, you can ask questions about stat
 *   "Compare the GDP of Japan and Germany."
 *   "Poverty indicators for India"
 
-## How It Works
+## Troubleshooting
+
+You can diagnose common errors, such as invalid API keys, by using the `d` flag:
+```
+gemini `d
+```
+
+## Uninstall
+
+To uninstall the extension, run:
+```
+gemini extension uninstall datacommons
+```
+
+## How it works
 
 This extension uses the `datacommons-mcp` PyPI package, which runs a local MCP server to translate natural language queries into Data Commons API calls. This package is based on the Data Commons MCP Server from the [Data Commons Agent Toolkit](https://github.com/datacommonsorg/agent-toolkit/tree/main/packages/datacommons-mcp).
