@@ -11,7 +11,7 @@ Before using this extension, you will need:
 -  [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed.
 -   A free Data Commons API key. To obtain an API key, go to https://apikeys.datacommons.org and request a key for the api.datacommons.org domain. Once you have your key, set it as an environment variable named `DC_API_KEY`.
 -   `uv`, a tool for managing and installing Python packages: install from https://docs.astral.sh/uv/getting-started/installation/. 
--   Optionally, if you have a GCP account and project and would like to use a [Google API key](https://aistudio-preprod.corp.google.com/api-keys) for authentication, set the key as an environment variable named `GEMINI_API_KEY`.
+
 
 ## Installation
 
