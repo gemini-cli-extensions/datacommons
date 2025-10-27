@@ -32,6 +32,12 @@ Once the extension is installed and configured, run `gemini`. You can ask questi
 *   "Compare the GDP of Japan and Germany."
 *   "Poverty indicators for India"
 
+## How it works
+
+This extension uses the `datacommons-mcp` PyPI package, which runs a local MCP server to translate natural language queries into Data Commons API calls. This package is based on the Data Commons MCP Server from the [Data Commons Agent Toolkit](https://github.com/datacommonsorg/agent-toolkit/tree/main/packages/datacommons-mcp).
+
+The extension also provides a context file (`DATACOMMONS.md`) that gives the Gemini agent instructions on how to handle user queries and server responses.
+
 ## Troubleshooting
 
 You can diagnose common errors, such as invalid API keys, by using the debug flag:
@@ -46,6 +52,3 @@ To uninstall the extension, run:
 gemini extension uninstall datacommons
 ```
 
-## How it works
-
-This extension uses the `datacommons-mcp` PyPI package, which runs a local MCP server to translate natural language queries into Data Commons API calls. This package is based on the Data Commons MCP Server from the [Data Commons Agent Toolkit](https://github.com/datacommonsorg/agent-toolkit/tree/main/packages/datacommons-mcp).
