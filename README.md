@@ -8,7 +8,7 @@ This page provides basic instructions for installing and running the extension. 
 
 Before using this extension, you will need:
 
--  [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed.
+-  [Gemini CLI](https://geminicli.com/docs/get-started/) installed.
 -   A free Data Commons API key. To obtain an API key, go to https://apikeys.datacommons.org and request a key for the api.datacommons.org domain. Once you have your key, set it as an environment variable named `DC_API_KEY`.
 -   `uv`, a tool for managing and installing Python packages: install from https://docs.astral.sh/uv/getting-started/installation/. 
 -  [git](https://git-scm.com/) installed.
@@ -19,7 +19,7 @@ Install the extension directly from GitHub:
 ```sh
 gemini extensions install https://github.com/gemini-cli-extensions/datacommons
 ```
-> Note: If you have previously configured Gemini CLI to use the Data Commons MCP Server and want to use the extension instead, be sure to delete or comment out the `datacommons-mcp` section from your `.gemini/settings.json` file.
+> Note: If you have previously configured Gemini CLI to use the Data Commons MCP Server and want to use the extension instead, be sure to delete the `datacommons-mcp` section from your `.gemini/settings.json` file.
 
 ## Usage
 
