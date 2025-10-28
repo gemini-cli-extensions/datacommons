@@ -1,5 +1,4 @@
 # This workflow validates the Gemini extension in the repository
-# test
 name: Validate Gemini Extension
 
 # Run on pushes to the main branch and any pull request
