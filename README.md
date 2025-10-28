@@ -9,7 +9,7 @@ This page provides basic instructions for installing and running the extension. 
 Before using this extension, you will need:
 
 -  [Gemini CLI](https://geminicli.com/docs/get-started/) installed.
--   A free Data Commons API key. To obtain an API key, go to https://apikeys.datacommons.org and request a key for the api.datacommons.org domain. Once you have your key, set it as an environment variable named `DC_API_KEY`.
+-   A free Data Commons API key. To obtain an API key, go to https://apikeys.datacommons.org and request a key for the api.datacommons.org domain. 
 -   `uv`, a tool for managing and installing Python packages: install from https://docs.astral.sh/uv/getting-started/installation/. 
 -  [git](https://git-scm.com/) installed.
 
@@ -23,7 +23,12 @@ gemini extensions install https://github.com/gemini-cli-extensions/datacommons
 
 ## Usage
 
-Once the extension is installed and configured, run `gemini`. You can ask questions about statistical data in natural language. 
+1. Set your Data Commons API key as an environment variable:
+   ```
+   export DC_API_KEY=<YOUR_API_KEY>
+   ```
+2. Run `gemini`. 
+3. Ask questions about statistical data in natural language. 
 
 ### Examples
 
@@ -36,7 +41,7 @@ Once the extension is installed and configured, run `gemini`. You can ask questi
 
 This extension uses the `datacommons-mcp` PyPI package, which runs a local MCP server to translate natural language queries into Data Commons API calls. This package is based on the Data Commons MCP Server from the [Data Commons Agent Toolkit](https://github.com/datacommonsorg/agent-toolkit/tree/main/packages/datacommons-mcp).
 
-The extension also provides a context file (`DATACOMMONS.md`) that gives the Gemini agent instructions on how to handle user queries and server responses.
+The extension also provides a context file (`DATACOMMONS.md`) that gives the Gemini agent instructions on how to handle user queries and tool responses.
 
 ## Troubleshooting
 
