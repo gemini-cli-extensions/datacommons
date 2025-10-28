@@ -1,0 +1,54 @@
+# This workflow validates the Gemini extension in the repository
+# test
+name: Validate Gemini Extension
+
+# Run on pushes to the main branch and any pull request
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the repository code so we can access '.'
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js environment, which is needed for npm
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a recent LTS version
+
+      # 3. Install the Gemini CLI globally
+      - name: Install Gemini CLI
+        run: npm install -g @google/gemini-cli
+
+      # 4. Install the extension from the repository root
+      - name: Install local extension
+        run: yes | gemini extensions install .
+
+      # 5. List installed extensions and check for "datacommons"
+      #    The 'grep' command will search the output.
+      #    If "datacommons" is not found, grep will exit with an error,
+      #    failing this step and the entire workflow.
+      - name: Verify 'datacommons' extension is installed
+        run: | 
+          EXTENSIONS_OUTPUT=$(gemini extensions list)
+            
+          echo "--- Gemini Extensions List Output ---"
+          echo "$EXTENSIONS_OUTPUT"
+          echo "-------------------------------------"
+          
+          echo "Checking for extension name..."
+          echo "$EXTENSIONS_OUTPUT" | grep "datacommons"
+          
+          echo "Checking for context file..."
+          echo "$EXTENSIONS_OUTPUT" | grep "DATACOMMONS.md"
+          
+          echo "Checking for MCP server..."
+          echo "$EXTENSIONS_OUTPUT" | grep "datacommons-mcp"
