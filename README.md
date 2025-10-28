@@ -19,7 +19,7 @@ Install the extension directly from GitHub:
 ```sh
 gemini extensions install https://github.com/gemini-cli-extensions/datacommons
 ```
-> Note: If you have previously configured Gemini CLI to use the Data Commons MCP Server and want to use the extension instead, be sure to delete the `datacommons-mcp` section from your `.gemini/settings.json` file.
+> Note: If you have previously configured Gemini CLI to use the Data Commons MCP Server in the top-level `.gemini/settings.json` file and want to use the extension instead, be sure to delete the `datacommons-mcp` section from the file.
 
 ## Usage
 
@@ -54,6 +54,6 @@ gemini -d
 
 To uninstall the extension, run:
 ```
-gemini extension uninstall datacommons
+gemini extensions uninstall datacommons
 ```
 
