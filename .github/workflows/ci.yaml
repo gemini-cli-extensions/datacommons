@@ -32,10 +32,8 @@ jobs:
       - name: Install local extension
         run: yes | gemini extensions install .
 
-      # 5. List installed extensions and check for "datacommons"
-      #    The 'grep' command will search the output.
-      #    If "datacommons" is not found, grep will exit with an error,
-      #    failing this step and the entire workflow.
+      # 5. List installed extensions and check for the extension, 
+      #    the context file, and mcp server in the output.
       - name: Verify 'datacommons' extension is installed
         run: | 
           EXTENSIONS_OUTPUT=$(gemini extensions list)
