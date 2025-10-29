@@ -1,6 +1,6 @@
 # This workflow validates that the Data Commons GCLI Extension is installable.
 name: Run CI Checks
-
+#fix
 # Run on pushes to the main branch and any pull request
 on:
   push:
