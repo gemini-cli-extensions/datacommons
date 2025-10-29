@@ -9,7 +9,7 @@ on:
   pull_request:
 
 jobs:
-  validate:
+  validate-extension-config:
     runs-on: ubuntu-latest
 
     steps:
