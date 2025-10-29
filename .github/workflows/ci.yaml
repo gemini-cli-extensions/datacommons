@@ -1,5 +1,5 @@
 # This workflow validates the Gemini extension in the repository
-name: Validate Gemini Extension
+name: Run CI Checks
 
 # Run on pushes to the main branch and any pull request
 on:
@@ -30,7 +30,7 @@ jobs:
 
       # 4. Install the extension from the repository root
       - name: Install local extension
-        run: yes | gemini extensions install .
+        run: gemini extensions install . --consent
 
       # 5. List installed extensions and check for the extension, 
       #    the context file, and mcp server in the output.
