@@ -1,5 +1,5 @@
 # This workflow validates the Gemini CLI extension in the repository
-name: Validate Data Commons Gemini CLI Extension
+name: Run CI Checks
 
 # Run on pushes to the main branch and any pull request
 on:
