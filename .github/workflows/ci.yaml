@@ -12,7 +12,7 @@ jobs:
   validate-extension-config:
     name: validate-extension-config
     runs-on: ubuntu-latest
-    
+
     steps:
       # 1. Check out the repository code so we can access '.'
       - name: Check out repository
