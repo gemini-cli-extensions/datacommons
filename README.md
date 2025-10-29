@@ -15,20 +15,21 @@ Before using this extension, you will need:
 
 ## Installation
 
-Install the extension directly from GitHub:
-```sh
-gemini extensions install https://github.com/gemini-cli-extensions/datacommons
-```
-> Note: If you have previously configured Gemini CLI to use the Data Commons MCP Server and want to use the extension instead, be sure to delete the `datacommons-mcp` section from your `.gemini/settings.json` file.
-
-## Usage
-
-1. Set your Data Commons API key as an environment variable:
+1. Set your Data Commons API key as an environment variable in your shell or startup script (e.g. `.bashrc`):
    ```
    export DC_API_KEY=<YOUR_API_KEY>
    ```
-2. Run `gemini`. 
-3. Ask questions about statistical data in natural language. 
+1. Install the extension directly from GitHub:
+   ```sh
+   gemini extensions install https://github.com/gemini-cli-extensions/datacommons
+   ```
+> Note: If you have previously configured Gemini CLI to use the Data Commons MCP Server in a `settings.json` file (e.g. `~/.gemini/settings.json`) and want to use the extension instead, be sure to delete the `datacommons-mcp` section from the file.
+
+## Usage
+
+1. Run `gemini`. 
+1. To verify that the Data Commons tools are running, enter `/mcp list`. You should see the `datacommons-mcp` tools listed as "ready". If you don't, try running in [debug mode](#troubleshooting) to get diagnostic information.
+1. Ask questions about statistical data in natural language. 
 
 ### Examples
 
@@ -54,6 +55,5 @@ gemini -d
 
 To uninstall the extension, run:
 ```
-gemini extension uninstall datacommons
+gemini extensions uninstall datacommons
 ```
-
