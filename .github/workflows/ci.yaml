@@ -1,4 +1,4 @@
-# This workflow validates the Gemini extension in the repository
+# This workflow validates that the Data Commons GCLI Extension is installable.
 name: Run CI Checks
 
 # Run on pushes to the main branch and any pull request
