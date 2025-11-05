@@ -5,7 +5,7 @@
   "settings": [
     {
       "name": "Data Commons API Key",
-      "description": "To obtain a Data Commons API key, go to https://apikeys.datacommons.org and request a key for the api.datacommons.org domain.",
+      "description": "Set your Data Commons API key, obtained from https://apikeys.datacommons.org.",
       "envVar": "DC_API_KEY"
     }
   ],
