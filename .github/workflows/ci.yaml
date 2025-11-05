@@ -1,0 +1,52 @@
+# This workflow validates that the Data Commons GCLI Extension is installable.
+name: Run CI Checks
+
+# Run on pushes to the main branch and any pull request
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate-extension-config:
+    name: validate-extension-config
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the repository code so we can access '.'
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js environment, which is needed for npm
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a recent LTS version
+
+      # 3. Install the Gemini CLI globally
+      - name: Install Gemini CLI
+        run: npm install -g @google/gemini-cli
+
+      # 4. Install the extension from the repository root
+      - name: Install local extension
+        run: gemini extensions install . --consent
+
+      # 5. List installed extensions and check for the extension, 
+      #    the context file, and mcp server in the output.
+      - name: Verify 'datacommons' extension is installed
+        run: | 
+          EXTENSIONS_OUTPUT=$(gemini extensions list)
+            
+          echo "--- Gemini Extensions List Output ---"
+          echo "$EXTENSIONS_OUTPUT"
+          echo "-------------------------------------"
+          
+          echo "Checking for extension name..."
+          echo "$EXTENSIONS_OUTPUT" | grep "datacommons"
+          
+          echo "Checking for context file..."
+          echo "$EXTENSIONS_OUTPUT" | grep "DATACOMMONS.md"
+          
+          echo "Checking for MCP server..."
+          echo "$EXTENSIONS_OUTPUT" | grep "datacommons-mcp"
