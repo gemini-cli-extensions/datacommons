@@ -25,12 +25,12 @@ Before using this extension, you will need:
    ```sh
    gemini extensions install https://github.com/gemini-cli-extensions/datacommons --consent
    ```
-1. **Provide your Data Commons API key**: Upon installation, you will be prompted to enter your Data Commons API key. This will be stored at `~/.gemini/extensions/datacommons/.env`. To update or add the key in the future, you can modify this file directly.
+1. **Provide your Data Commons API key when prompted**: Upon installation, you will be prompted to enter your Data Commons API key which will be stored at `~/.gemini/extensions/datacommons/.env`. To update or add the key in the future, you can modify this file directly.
 
-  * Alternatively, you can set the API key as an environment variable before installing the extension:
-   ```bash
-   export DC_API_KEY=<YOUR_API_KEY>
-   ```
+   * Alternatively, you can override the API key by manually setting it as an environment variable before starting `gemini`:
+      ```bash
+      export DC_API_KEY=<YOUR_API_KEY>
+      ```
 
 > Note: If you have previously configured Gemini CLI to use the Data Commons MCP Server in a `settings.json` file (e.g. `~/.gemini/settings.json`) and want to use the extension instead, be sure to delete the `datacommons-mcp` section from the file.
 
