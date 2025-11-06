@@ -30,7 +30,7 @@ jobs:
 
       # 4. Install the extension from the repository root
       - name: Install local extension
-        run: gemini extensions install . --consent
+        run: yes | gemini extensions install . --consent
 
       # 5. List installed extensions and check for the extension, 
       #    the context file, and mcp server in the output.
