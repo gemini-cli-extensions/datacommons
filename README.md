@@ -21,7 +21,7 @@ Before using this extension, you will need:
    ```
 1. Install the extension directly from GitHub:
    ```sh
-   gemini extensions install https://github.com/gemini-cli-extensions/datacommons
+   gemini extensions install https://github.com/gemini-cli-extensions/datacommons [--auto-update]
    ```
 > Note: If you have previously configured Gemini CLI to use the Data Commons MCP Server in a `settings.json` file (e.g. `~/.gemini/settings.json`) and want to use the extension instead, be sure to delete the `datacommons-mcp` section from the file.
 
