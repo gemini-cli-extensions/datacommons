@@ -17,7 +17,7 @@ Before using this extension, you will need:
 
 1. **Install the extension** directly from GitHub:
    ```sh
-   gemini extensions install https://github.com/gemini-cli-extensions/datacommons --consent
+   gemini extensions install https://github.com/gemini-cli-extensions/datacommons
    ```
 1. **Provide your Data Commons API key when prompted**: Upon installation, you will be prompted to enter your Data Commons API key which will be stored at `~/.gemini/extensions/datacommons/.env`. To update or add the key in the future, you can modify this file directly.
 
