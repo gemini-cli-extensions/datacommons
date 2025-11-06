@@ -8,7 +8,12 @@ This page provides basic instructions for installing and running the extension. 
 
 Before using this extension, you will need:
 
--  [Gemini CLI](https://geminicli.com/docs/get-started/) installed.
+-  [Gemini CLI](https://geminicli.com/docs/get-started/) installed. Make sure you have the latest version:    
+
+   ```bash
+   npm update -g @google/gemini-cli
+   ```
+
 -   A free Data Commons API key. To obtain an API key, go to https://apikeys.datacommons.org and request a key for the api.datacommons.org domain. 
 -   `uv`, a tool for managing and installing Python packages: install from https://docs.astral.sh/uv/getting-started/installation/. 
 -  [git](https://git-scm.com/) installed.
