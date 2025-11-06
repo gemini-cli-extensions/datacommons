@@ -8,7 +8,9 @@ This page provides basic instructions for installing and running the extension. 
 
 Before using this extension, you will need:
 
--  [Gemini CLI](https://geminicli.com/docs/get-started/) installed. Make sure you have the latest version:    
+-  [Gemini CLI](https://geminicli.com/docs/get-started/) installed. 
+
+  - Make sure you have the latest version:    
 
    ```bash
    npm update -g @google/gemini-cli
