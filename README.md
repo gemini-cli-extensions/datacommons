@@ -2,7 +2,7 @@
 
 This is a Gemini CLI extension that allows you to query public datasets from [Data Commons](https://datacommons.org/) using natural language, and to ground AI responses from any any other tools in authoritative data, to reduce hallucinations.
 
-This page provides basic instructions for installing and running the extension. For complete information on using Data Commons with Gemini CLI, please see the [Data Commons documentation](https://docs.datacommons.org/mcp).
+This page provides basic instructions for installing and running the extension. For more information on Data Commons MCP support, see the [Data Commons documentation](https://docs.datacommons.org/mcp).
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ Before using this extension, you will need:
    ```
 1. Install the extension directly from GitHub:
    ```sh
-   gemini extensions install https://github.com/gemini-cli-extensions/datacommons
+   gemini extensions install https://github.com/gemini-cli-extensions/datacommons [--auto-update]
    ```
 > Note: If you have previously configured Gemini CLI to use the Data Commons MCP Server in a `settings.json` file (e.g. `~/.gemini/settings.json`) and want to use the extension instead, be sure to delete the `datacommons-mcp` section from the file.
 
@@ -50,6 +50,7 @@ You can diagnose common errors, such as invalid API keys, by using the debug fla
 ```
 gemini -d
 ```
+For more troubleshooting information, see the [Data Commons documentation](https://docs.datacommons.org/mcp/run_tools.html#troubleshoot).
 
 ## Uninstall
 
