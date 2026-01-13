@@ -1,17 +1,14 @@
 {
   "name": "datacommons",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Query public datasets from Data Commons using natural language, and ground AI responses from any tools using authoritative data.",
   "contextFileName": "DATACOMMONS.md",
   "mcpServers": {
     "datacommons-mcp": {
-      "command": "uvx",
-      "args": [
-        "datacommons-mcp@1.1.2",
-        "serve",
-        "stdio",
-        "--skip-api-key-validation"
-      ]
+      "httpUrl": "https://api.datacommons.org/mcp",
+      "headers": {
+        "X-API-Key": "$DC_API_KEY"
+      }
     }
   }
 }
